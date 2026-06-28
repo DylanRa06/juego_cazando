@@ -121,3 +121,15 @@ function restarTiempo() {
         alert("GAME OVER");
     }
 }
+
+function reiniciarJuego() {
+    clearInterval(intervaloTiempo);
+    puntos = 0;
+    tiempo = 10;
+    
+    cambiarTexto("puntos", puntos);
+    cambiarTexto("tiempo", tiempo);
+    
+    limpiarCanva();
+    iniciarJuego();
+}
